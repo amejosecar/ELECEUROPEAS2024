@@ -14,6 +14,12 @@ Disponéis de multitud de fuentes de las que poder extraer esta información en 
 
 Lo importante será construir un modelo sólido tanto de entrada de datos como de salida de conclusiones y que estas sean presentadas de manera elocuente durante las presentaciones de final de módulo.
 
+
+
+
+![deda_0402](https://github.com/amejosecar/ELECEUROPEAS2024/assets/148058680/10dd5af1-cbb3-45fc-a33b-4c13e23dbcd9)
+
+
 ### Equipos
 
 Se realizarán por grupos, pudiendo también realizarse de manera individual si así se quisiera.
