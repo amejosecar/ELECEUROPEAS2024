@@ -1,7 +1,35 @@
-## Base de Datos en AIVEN:
+## Base de Datos (MySQL) en AIVEN:
 Service URI: mysql://CLICK_TO:REVEAL_PASSWORD@mysql-1b41bca7-trabajosdedanielalejandro-fb88.l.aivencloud.com:11072/defaultdb?ssl-mode=REQUIRED
 Name: defaultdb
 Host: mysql-1b41bca7-trabajosdedanielalejandro-fb88.l.aivencloud.com
 Port: 11072
 User: avnadmin
 Password: AVNS_wsne_MGKpGw2WYscYlP
+
+Para conectarse desde Python a la Base con My SQL:
+#!pip install pymysql
+#!pip install cryptography
+import pymysql
+
+timeout = 10
+connection = pymysql.connect(
+  charset="utf8mb4",
+  connect_timeout=timeout,
+  cursorclass=pymysql.cursors.DictCursor,
+  db="defaultdb",
+  host="mysql-1b41bca7-trabajosdedanielalejandro-fb88.l.aivencloud.com",
+  password="AVNS_wsne_MGKpGw2WYscYlP",
+  read_timeout=timeout,
+  port=11072,
+  user="avnadmin",
+  write_timeout=timeout,
+)
+  
+try:
+  cursor = connection.cursor()
+  cursor.execute("CREATE TABLE mytest (id INTEGER PRIMARY KEY)")
+  cursor.execute("INSERT INTO mytest (id) VALUES (1), (2)")
+  cursor.execute("SELECT * FROM mytest")
+  print(cursor.fetchall())
+finally:
+  connection.close()
