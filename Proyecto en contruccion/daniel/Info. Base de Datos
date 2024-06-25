@@ -4,7 +4,7 @@ Name: defaultdb
 Host: mysql-1b41bca7-trabajosdedanielalejandro-fb88.l.aivencloud.com
 Port: 11072
 User: avnadmin
-Password: contraseña
+Password: 
 
 Para conectarse desde Python a la Base con My SQL:
 #!pip install pymysql
@@ -18,7 +18,7 @@ connection = pymysql.connect(
   cursorclass=pymysql.cursors.DictCursor,
   db="defaultdb",
   host="mysql-1b41bca7-trabajosdedanielalejandro-fb88.l.aivencloud.com",
-  password="contraseña",
+  password="",
   read_timeout=timeout,
   port=11072,
   user="avnadmin",
